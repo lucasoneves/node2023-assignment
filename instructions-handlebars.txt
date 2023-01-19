@@ -1,0 +1,7 @@
+- Import handlebars
+- Set the engine (view engine)
+- create all .hbs files
+- pass config to expressHbs function (default layout and extname)
+- output dinamycally ( => {{}} )
+- {{{ body }}} to use as layout
+- 

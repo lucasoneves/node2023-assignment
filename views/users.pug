@@ -1,6 +1,9 @@
 extends layouts/main-layout.pug 
 block content 
 	h1 Users
-	ul 
-		each user in users 
-			li #{user.name}
+	if users.length > 0
+		ul 
+			each user in users 
+				li #{user.name}
+	else 
+		h1 No users found
