@@ -2,15 +2,26 @@ const express = require("express");
 
 const app = express();
 
+const bodyParser = require('body-parser');
+
+const users = [];
+
+app.set('view engine', 'pug')
+app.set('views', 'views');
+
+app.use(express.urlencoded({ extended: true}))
+
 app.get("/", (req, res, next) => {
-  res.render();
+    res.render('index', { pageTitle: 'Add user'});
 });
 
 app.get("/users", (req, res, next) => {
-  res.render();
+    console.log(users)
+    res.render('users', { pageTitle: 'Users', users });
 });
 
 app.post('/add-user', (req, res, next) => {
+    users.push({ name: req.body.username});
     res.redirect('/users');
 });
 
