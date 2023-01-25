@@ -3,10 +3,12 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/add-player", (req, res, next) => {
-  res.send(`<form method="POST" action="players">
-        <input type="text" name="playerName" placeholder="Player name"></input>
-        <button type="submit">Save player</button>
-    </form>`);
+  res.render('add-players')
 });
+
+router.post('/add-player', (req, res, next) => {
+  console.log('Player: ' + req.body.playerName)
+  res.redirect("/");
+})
 
 module.exports = router;

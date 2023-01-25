@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(to right bottom, #2c3e50, #34495e);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px calc(20px * 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
