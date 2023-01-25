@@ -4,4 +4,3 @@
 - pass config to expressHbs function (default layout and extname)
 - output dinamycally ( => {{}} )
 - {{{ body }}} to use as layout
-- 
