@@ -1,7 +1,9 @@
 extends layouts/main-layout.pug 
+block styles 
+    link(rel="stylesheet" href="/css/form.css")
 
 block content 
-    <form method="POST" action="add-player">
-        <input type="text" name="playerName" placeholder="Player name"></input>
-        <button type="submit">Save player</button>
+    <form method="POST" action="add-player" class="main-form">
+        <input type="text" name="playerName" placeholder="Player name" class="main-input">
+        <button type="submit" class="main-button">Save player</button>
     </form>

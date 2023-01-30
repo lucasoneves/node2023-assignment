@@ -1,0 +1,28 @@
+.main-input {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 44px;
+}
+
+.main-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-input:focus {
+    border: 2px solid rgb(95, 95, 95);
+    outline: 0;
+}
+
+.main-button {
+    padding: 5px 20px;
+    border: 2px solid black;
+    background: black;
+    font-size: 14px;
+    height: 44px;
+    border-radius: 4px;
+}
