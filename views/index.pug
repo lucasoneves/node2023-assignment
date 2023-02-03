@@ -3,7 +3,10 @@ extends layouts/main-layout.pug
 block content
     h2 Players
         .players-list 
-            if players.length > 0
-                h2 #{players}
+            if hasPlayers
+                each player in players
+                    div.player-card 
+                        h2 #{player.title}
+                        img(src=player.urlImage, alt="", class="avatar")
             else 
-                h2 #{players}
+                h2 Sem jogadores cadastrados

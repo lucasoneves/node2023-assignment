@@ -1,40 +1,62 @@
 * {
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 body {
-    background: linear-gradient(to right bottom, #2c3e50, #34495e);
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+  background: linear-gradient(to right bottom, #2c3e50, #34495e);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
 .main-header {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 20px calc(20px * 3);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px calc(20px * 3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header nav ul {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 15px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.players-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  background: linear-gradient(to top, #16a085, transparent);
+  padding: 30px 15px;
+  border-radius: 5px;
+  height: 240px;
+  overflow-y: hidden;
+}
+
+.player-card .avatar {
+  width: 100px;
 }

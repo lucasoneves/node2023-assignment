@@ -14,7 +14,5 @@ app.listen(3000);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({ extended: false })); // https://www.youtube.com/watch?v=P1OI_EKyl6U
-
-app.use(playerRoutes);
-
 app.use(adminRoutes);
+app.use(playerRoutes);

@@ -6,11 +6,16 @@ exports.getPlayers = (req, res, next) => {
         players: players, 
         pageTitle: "Players",
         path: "/players",
-        hasProducts: players.length > 0
+        hasPlayers: players.length > 0
     })
 }
 
-exports.addPlayer = (req, res, next) => {
-    const player = new Player(req)
-    player.save()
+exports.postAddPlayer = (req, res, next) => {
+    const player = new Player(req.body.playerName, req.body.urlImage);
+    player.save();
+    res.redirect('/');
+}
+
+exports.getAddPlayers = (req, res, next) => {
+    res.render('add-players', { pageTitle: 'Add Player', path: '/add-players'})
 }

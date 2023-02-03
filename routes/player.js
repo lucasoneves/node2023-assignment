@@ -4,13 +4,7 @@ const router = express.Router();
 
 const playerController = require('../controllers/players');
 
-router.get("/add-player", (req, res, next) => {
-  res.render('add-players')
-});
-
-router.post('/add-player', (req, res, next) => {
-  playerController.addPlayer(req.body.playerName)
-  res.redirect("/");
-})
+router.get('/', playerController.getPlayers);
+router.get('/players', playerController.getPlayers);
 
 module.exports = router;
