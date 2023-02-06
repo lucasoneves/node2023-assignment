@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  color: #88ff2d;
+}
+
 ul {
   list-style: none;
 }
@@ -55,6 +59,7 @@ body {
   border-radius: 5px;
   height: 240px;
   overflow-y: hidden;
+  justify-content: space-between;
 }
 
 .player-card .avatar {

@@ -17,5 +17,5 @@ exports.postAddPlayer = (req, res, next) => {
 }
 
 exports.getAddPlayers = (req, res, next) => {
-    res.render('add-players', { pageTitle: 'Add Player', path: '/add-players'})
+    res.render('add-players', { pageTitle: 'Add Player', path: '/add-player'})
 }
