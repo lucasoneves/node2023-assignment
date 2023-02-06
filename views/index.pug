@@ -8,5 +8,6 @@ block content
                     div.player-card 
                         h2 #{player.title}
                         img(src=player.urlImage, alt="", class="avatar")
+                        a(href=`/players/${player.id}`, class="btn-detail") Detalhes 
             else 
                 h2 Sem jogadores cadastrados

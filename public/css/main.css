@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  color: #88ff2d;
+}
+
 ul {
   list-style: none;
 }
@@ -53,10 +57,30 @@ body {
   background: linear-gradient(to top, #16a085, transparent);
   padding: 30px 15px;
   border-radius: 5px;
-  height: 240px;
+  height: 270px;
   overflow-y: hidden;
+  justify-content: space-between;
+  position: relative;
 }
 
 .player-card .avatar {
   width: 100px;
+}
+
+
+.btn-detail {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to bottom right, #215f5c, #102b5f);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-detail:hover {
+  background: linear-gradient(to bottom left, #215f5c, #102b5f);;
 }

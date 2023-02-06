@@ -6,10 +6,11 @@ let players = [];
 module.exports = class Player {
   constructor(title, urlImage) {
     this.title = title;
-    this.urlImage = urlImage
+    this.urlImage = urlImage;
   }
 
   save() {
+    this.id = Math.random().toString();
     const p = path.join(
       path.dirname(require.main.filename),
       "data",
@@ -18,7 +19,7 @@ module.exports = class Player {
 
     fs.readFile(p, (err, fileContent) => {
       if (!err) {
-        players =  JSON.parse(fileContent);
+        players = JSON.parse(fileContent);
       }
       players.push(this);
       fs.writeFile(p, JSON.stringify(players), (err) => {
@@ -29,18 +30,34 @@ module.exports = class Player {
 
   static fetchAll() {
     const p = path.join(
-        path.dirname(require.main.filename),
-        "data",
-        "players.json"
-      );
+      path.dirname(require.main.filename),
+      "data",
+      "players.json"
+    );
     fs.readFile(p, (err, fileContent) => {
       if (err) {
         return [];
       }
 
-      players = JSON.parse(fileContent)
+      players = JSON.parse(fileContent);
     });
-    return players
+    return players;
   }
 
+  static findPlayerById(id) {
+    let playerById;
+    const p = path.join(
+      path.dirname(require.main.filename),
+      "data",
+      "players.json"
+    );
+    fs.readFile(p, (err, fileContent) => {
+      if (err) {
+        return [];
+      }
+      playerById = 'cocô'
+      return playerById
+    });
+    return playerById
+  }
 };
