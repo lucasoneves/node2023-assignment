@@ -11,7 +11,9 @@ exports.getPlayers = (req, res, next) => {
 }
 
 exports.postAddPlayer = (req, res, next) => {
-    const player = new Player(req.body.playerName, req.body.urlImage);
+    const playerName = req.body.playerName;
+    const imageUrl = req.body.urlImage;
+    const player = new Player(playerName, imageUrl);
     player.save();
     res.redirect('/');
 }
