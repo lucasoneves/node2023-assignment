@@ -10,6 +10,12 @@ exports.getPlayers = (req, res, next) => {
     })
 }
 
+exports.getPlayerDetail = (req, res, next) => {
+    const playerId = req.params.playerId;
+    console.log(playerId)
+    res.redirect('/')
+}
+
 exports.postAddPlayer = (req, res, next) => {
     const playerName = req.body.playerName;
     const imageUrl = req.body.urlImage;
