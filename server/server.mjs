@@ -19,8 +19,7 @@ app.post('/todo', (req, res, next) => {
   }
 
   db.push(data)
-  res.status(201)
-  res.json(data)
+  res.status(201).json(data)
 })
 
 app.get('/todo', (req, res, next) => {
