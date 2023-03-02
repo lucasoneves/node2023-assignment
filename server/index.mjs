@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     })
   } else {
     res.writeHead(200)
-    res.end('hello from my server')
+    res.end('hi')
   }
 
 })
