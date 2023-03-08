@@ -1,8 +1,8 @@
 {
-  "name": "reddit-cli",
+  "name": "lucasneves-reddit-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "test": "jest"
   },
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lucasneves-reddit-cli": "^1.0.0",
     "node-fetch": "^3.3.0",
     "open": "^8.4.2",
     "yargs": "^17.7.1"

@@ -4,7 +4,7 @@ import morgan from 'morgan'
 
 const app = express()
 
-const port = 8000
+const port = process.env.PORT
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
